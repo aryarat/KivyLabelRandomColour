@@ -1,0 +1,32 @@
+<MyWidget>:
+    orientation: "vertical"
+    background_color: [22/255, 160/255, 133/255, 1]
+
+    Label:
+        text: u'Hello World !'
+        font_size: '18sp'
+        size_hint: (1, 0.8)
+        canvas.before:
+            Color:
+                rgba: root.background_color
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    GridLayout:
+        cols: 2
+        rows: 1
+        size_hint: (1, 0.1)
+        Button:
+            text: 'Click Me'
+            size_hint: (0.30, 0.1)
+            on_press: root.start()
+        Button:
+            text: 'Stop Me'
+            size_hint: (0.30, 0.1)
+            on_press: root.stop()
+    BoxLayout:
+        size_hint: (1, 0.1)
+        Button:
+            text: 'Exit'
+            on_press: app.stop()
