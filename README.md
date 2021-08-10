@@ -3,6 +3,7 @@ To display random colour on label widget
 
 << Library Used >>
 import random
+
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.lang import Builder
